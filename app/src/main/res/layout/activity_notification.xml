@@ -6,14 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/appbackground"
-
+android:orientation="vertical"
     tools:context=".Notification">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:theme="@style/AppTheme"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/appbackground"
         android:elevation="4dp"
         >
         <TextView
@@ -23,5 +23,27 @@
             android:gravity="center"
             android:textSize="24dp"/>
     </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:padding="20dp"
+        android:text="Bin location id:1 located near RK is almost full need to dump or replace"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:text="Bin location id:4 near Gate is almost full need to dump or replace"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textColor="@color/white"
+        android:text="Thank you for your service at Locatio id 3 at cst"
+        />
 
 </LinearLayout>

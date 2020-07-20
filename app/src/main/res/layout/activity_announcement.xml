@@ -1,26 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.appcompat.widget.LinearLayoutCompat
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/appbackground"
-    tools:context=".Announcement">
+    tools:context=".screen.Announcement">
 
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:theme="@style/AppTheme"
-        android:background="@color/colorPrimary"
-        android:elevation="4dp"
-        >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ANNOUNCEMENT"
-            android:gravity="center"
-            android:textSize="24dp"/>
-    </androidx.appcompat.widget.Toolbar>
+     <LinearLayout
+         android:id="@+id/ll_List"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:visibility="visible"
+         >
+          <androidx.appcompat.widget.Toolbar
+              android:layout_width="match_parent"
+              android:background="@drawable/appbackground"
+              android:layout_height="wrap_content">
 
-</LinearLayout>
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textAlignment="center"
+                   android:textSize="24dp"
+                   android:text="Announcment"
+                    android:textColor="@color/white"/>
+          </androidx.appcompat.widget.Toolbar>
+          <include layout="@layout/item_annoucment"/>
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              >
+               <androidx.recyclerview.widget.RecyclerView
+                   android:id="@+id/rvAnnouncement"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"/>
+               <ProgressBar
+                   android:id="@+id/progressBar"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   />
+          </FrameLayout>
+
+     </LinearLayout>
+     <LinearLayout
+         android:id="@+id/ll_Error"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical"
+         android:visibility="gone"
+         android:gravity="center"
+         >
+          <FrameLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/fl_errorView"
+              android:visibility="visible"
+              >
+               <ImageView
+                   android:layout_gravity="center_horizontal"
+                   android:layout_width="150dp"
+                   android:layout_height="match_parent"
+                   />
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   style="@style/Base.TextAppearance.AppCompat.Caption"
+                   android:text="No Announcement Data Yet Available"
+                   android:gravity="center"
+                   android:layout_gravity="center"
+                   android:layout_marginTop="70dp"
+                   />
+
+               <Button
+                   android:id="@+id/retry"
+                   style="@style/Widget.AppCompat.Button"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="bottom|center|center_horizontal"
+                   android:layout_marginBottom="15dp"
+                   android:background="@color/colorPrimaryDark"
+                   android:text="Retry"
+                   android:textColor="@android:color/white" />
+          </FrameLayout>
+
+     </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

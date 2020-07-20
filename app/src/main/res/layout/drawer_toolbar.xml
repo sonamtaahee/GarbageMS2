@@ -8,8 +8,9 @@
         android:layout_height="55dp"
         android:id="@+id/toolbar"
         app:title="@string/app_name"
+        app:titleTextColor="@color/white"
         android:theme="@style/AppTheme"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/appbackground"
         android:elevation="4dp"/>
 
 </RelativeLayout>

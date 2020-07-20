@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:theme="@style/AppTheme"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="karma"
+        android:gravity="center"
+        android:textSize="24dp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+        <include android:layout_width="match_parent"
+            android:layout_height="329dp"
+            android:layout_margin="10dp"
+            layout="@layout/activity_announcement"
+            android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="karma"
+        android:gravity="left"
+        android:textSize="24dp"
+        android:id="@+id/date"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="karma"
+        android:gravity="right"
+        android:textSize="24dp"
+        android:id="@+id/name"/>
+
+
+</LinearLayout>
